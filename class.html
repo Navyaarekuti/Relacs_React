@@ -7,12 +7,19 @@
 </head>
 <body>
     <div id = "root"></div>
-    <script>
+    <!-- <script>
          const headingElement = document.createElement('h3');
          headingElement.innerHTML = 'Hello from JS';
          const root1 = document.getElementById('root');
          root1.appendChild(headingElement);
-    </script>
-    </script>
+    </script> -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+      <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  const rootElem = document.getElementById('root');
+  const headingElem = React.createElement("h1",{style:{color:"red"},message:"heeee"},"Hello from React")
+      function App() {
+        return <h1>Hello from React</h1>;
+      }
+      ReactDOM.render(<App />, document.getElementById("root"));
 </body>
 </html>
